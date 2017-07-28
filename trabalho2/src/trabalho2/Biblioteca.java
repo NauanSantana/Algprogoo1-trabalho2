@@ -102,6 +102,9 @@ public class Biblioteca
         return foiPossivelEmprestar;
     }
 
+    
+    
+    
     /**
      * Metodo que devolvera o livro
      */
