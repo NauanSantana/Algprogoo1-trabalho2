@@ -2,7 +2,7 @@ package trabalho2;
 
 public class Biblioteca
 {
-
+    
     private Usuario[] usuarios;
     private Livro[] livros;
 
@@ -101,9 +101,6 @@ public class Biblioteca
 
         return foiPossivelEmprestar;
     }
-
-    
-    
     
     /**
      * Metodo que devolvera o livro
