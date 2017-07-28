@@ -127,6 +127,7 @@ public class Biblioteca
                 livroEmprestado = livros[i];
             }
         }
+        
         //verifica se o usuario pegou o livro
         for (int i = 0; i < nomeUsuario.getLivrosEmprestados().length && livroCadastrado && nomeUsuario.getLivrosEmprestados()[i] != null; i++) {
             if (nomeUsuario.getLivrosEmprestados()[i].getCodigoLivro() == livroEmprestado.getCodigoLivro())
