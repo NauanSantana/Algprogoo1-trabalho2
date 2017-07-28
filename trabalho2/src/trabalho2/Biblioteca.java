@@ -10,10 +10,6 @@ public class Biblioteca
      * Construtor padrao da classe
      */
     
-    
-    
-    
-    
     public Biblioteca()
     {
         usuarios = new Usuario[30];
@@ -132,7 +128,7 @@ public class Biblioteca
             }
         }
         //verifica se o usuario pegou o livro
-        for (int i = 0; i < nomeUsuario.getLivrosEmprestados().length && livroCadastrado; i++) {
+        for (int i = 0; i < nomeUsuario.getLivrosEmprestados().length && livroCadastrado && nomeUsuario.getLivrosEmprestados()[i] != null; i++) {
             if (nomeUsuario.getLivrosEmprestados()[i].getCodigoLivro() == livroEmprestado.getCodigoLivro())
                 foiEmprestado = true;
         }
@@ -176,7 +172,6 @@ public class Biblioteca
     public void imprimeInformacoesLivros()
     {
         Livro aux;
-
         for (int i = 0; i < livros.length - 1; i++) {
             for (int j = i + 1; j < livros.length; j++) {
 
@@ -200,7 +195,7 @@ public class Biblioteca
     /*
 	Pré-condicoes:Deve receber como parametros nome , numero do CPF, endereco e o telefone.
 	Pos-condicoes: Retornar true caso o usuario tenha sido cadastrado com sucesso ou false caso a capacidade da biblioteca não 
-				   permita um novo usuario. Exibi na uma mensagem informando se o cadastro foi realizado com sucesso ou nao.
+		       permita um novo usuario. Exibi na uma mensagem informando se o cadastro foi realizado com sucesso ou nao.
      */
     public boolean cadastrarUsuario(String nome, String cpf, String endereco, String telefone)
     {
@@ -272,8 +267,7 @@ public class Biblioteca
 
     /*
 	Pré-condicoes: As variáveis de instancia devem ter valores associados
-	Pos-condicoes: Os dados sao organizados na ordem alfabetica de acordo com o nome do usuario 
-				   e os atributos sao exibidos
+	Pos-condicoes: Os dados sao organizados na ordem alfabetica de acordo com o nome do usuario e os atributos sao exibidos
      */
     public void imprimeInformacoesUsuarios()
     {
